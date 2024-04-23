@@ -1,0 +1,16 @@
+./node_modules
+node_modules
+
+public
+./public
+
+dist
+./dist
+./src/.env
+
+.env
+env
+/src/env
+/src/.env
+./env
+./.env
