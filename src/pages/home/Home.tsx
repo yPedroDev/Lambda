@@ -5,7 +5,6 @@ import { twMerge } from "tailwind-merge";
 import { Switch } from "@/components/ui/switch";
 
 import { NavbarRedu, NavTypes } from "@/reducers/components/Navbar/NavbarRedu";
-import { HomeRedu, HomeTypes } from "@/reducers/pages/home/HomeRedu";
 import { useToast } from "@/components/ui/use-toast";
 
 const Btn = React.lazy(() => import("@/components/button/Button"));

@@ -24,7 +24,9 @@ const button = tv({
     },
     size: {
       default: "h-8",
-      mobile: "h-9 w-9"
+      icon: "h-9 w-9",
+      sm: "",
+      lg: ""
     },
     color: {
       default: "bg-orange/30",
