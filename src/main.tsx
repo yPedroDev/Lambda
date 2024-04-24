@@ -9,9 +9,10 @@ import { Toaster } from "@/components/ui/toaster"
 
 // [ Pages ] \\
 
-import { HomePage, ErrorPage, NoPageFound } from "@/page";
-
-const LandingPageLayout = React.lazy(() => import("@/pages/landing/Landing")); // Fixed
+const HomePage = React.lazy(() => import("@/pages/home/Home"));
+const ErrorPage = React.lazy(() => import("@/pages/error/Error"));
+const NoPageFound = React.lazy(() => import("@/pages/nopagefound/NoPageFound"));
+const LandingPageLayout = React.lazy(() => import("@/pages/landing/Landing"));
 
 // [ Others ] \\
 
