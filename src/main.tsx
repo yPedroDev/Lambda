@@ -3,10 +3,16 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { HomePage, LandingPageLayout, NoPageFound, ErrorPage } from "@/pages";
+
 import { DarkModeProvider } from "@/context/theme/ThemeContext";
 import { Toaster } from "@/components/ui/toaster"
- 
+
+// [ Pages ] \\
+
+import { HomePage, LandingPageLayout, ErrorPage, NoPageFound } from "@/page";
+
+// [ Others ] \\
+
 const Loader = React.lazy(() => import("@/components/loader/Loader"));
 
 import "@/assets/css/main.css";
