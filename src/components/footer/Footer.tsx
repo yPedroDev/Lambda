@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Switch } from "@/components/ui/switch";
 import { NavbarRedu } from "@/reducers/components/Navbar/NavbarRedu";
+import { AnimatedTooltip } from "@/components/ui/aceternity/3DTooltip";
 
 const Image = React.lazy(() => import("@/components/utils/image/Image"));
 
@@ -21,14 +22,29 @@ export default function Footer() {
             <Image
               width={58}
               height={58}
+              style={{zIndex: 200}}
               alt="A logo do site (meio obvio)"
-              src="https://media.discordapp.net/attachments/1028750792640954368/1229857104601284618/Sem_titulo.png?ex=663134af&is=661ebfaf&hm=1541752fa06135541f141132d9aefcc105e0e7ba0a4d285e357abce459fac918&=&format=webp&quality=lossless&width=464&height=477"
-            ></Image>
-            <div className="flex-row gap-2" style={{userSelect: 'none'}}>
-              <p>Pedro</p>
-              <div className="divider mt-0 mb-0"/>
-              <p>A.B</p>
+              src="https://firebasestorage.googleapis.com/v0/b/lambda-5409b.appspot.com/o/website%2FLogoIcon.webp?alt=media&token=c33f3d3e-d125-40fe-8526-604ea8d33d6d"
+            />
+            <div className="flex flex-row items-center justify-center" style={{zIndex: 50}}>
+              <AnimatedTooltip
+                text={"Dono do servidor"}
+                tid={1}
+                children={
+                  <>
+                    <div
+                      className="flex-row gap-2"
+                      style={{ userSelect: "none" }}
+                    >
+                      <p>Pedro</p>
+                      <div className="divider mt-0 mb-0" />
+                      <p>A.B</p>
+                    </div>
+                  </>
+                }
+              />
             </div>
+
             {/* <p className="flex gap-4 items-center flex-wrap text-slate-400">
               Feito por
               <div className="border-white-500 border-2 rounded-full">

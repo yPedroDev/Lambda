@@ -1,14 +1,14 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 
 const TypewriteContent = React.lazy(() => import("./TypewriterContent"));
 const Loader = React.lazy(() => import("../../../components/loader/Loader"));
 
-type Props = React.ComponentProps<"button"> & {
+type Props = ComponentProps<"h1"> & {
   text: string;
   typingSpeed: number;
 }
 
-const Typewriter = (props: Props) => {
+const Typewriter = ({text, typingSpeed, ...props}: Props) => {
   return (
     <>
       <React.Suspense
@@ -22,7 +22,8 @@ const Typewriter = (props: Props) => {
         }
       >
         <TypewriteContent
-          text={props.text != null ? props.text : ""}
+          {...props}
+          content={text != null ? text : ""}
         />
       </React.Suspense>
     </>

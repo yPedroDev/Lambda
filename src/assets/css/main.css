@@ -56,14 +56,11 @@ button {
 .center {
   color: white;
   text-align: center;
-  padding: 65px;
   flex-direction: column;
   display: flex;
 }
 .background {
-  background: url("https://media.discordapp.net/attachments/1028750792640954368/1229923397304324097/wMyC7HNgJWbgAAAABJRU5ErkJggg.png?ex=6631726c&is=661efd6c&hm=8eac2d4798b14703d8c0caac9e424c4532d2736c054ebf4126ebbafb022efe50&=&format=webp&quality=lossless&width=688&height=380");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: transparent;
 }
 
 /* Typewrite */
@@ -110,21 +107,6 @@ button {
   transform: translatey(0px);
   transition: all 0.4s ease-in-out;
   animation: floating 6s ease-in-out infinite;
-}
-
-/* Smooth Scrollbar */
-*::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  border-radius: 50px;
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  width: 5px;
-  height: 8px;
-  border-radius: 50px;
-  background: #252525;
 }
 
 /* Avatar */

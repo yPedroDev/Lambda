@@ -16,14 +16,15 @@ const LandingPageLayout = () => {
     isMobile: false,
   });
   const { darkMode } = useDarkMode();
+
   return (
     <>
       <LazyLoadComponent>
         <div
           className={
             darkMode
-              ? "dark text-foreground bg-background"
-              : "light text-foreground bg-background"
+              ? "dark text-foreground bg-background bg-no-repeat bg-cover bg-[url('https://firebasestorage.googleapis.com/v0/b/lambda-5409b.appspot.com/o/website%2Fdarkbg.webp?alt=media&token=40769c2d-b33d-4eb8-aab0-875d90c335dd')]"
+              : "light text-foreground bg-background bg-no-repeat bg-cover bg-[url('https://firebasestorage.googleapis.com/v0/b/lambda-5409b.appspot.com/o/website%2Flightbg.webp?alt=media&token=2acd2f6e-4b7d-42e6-bfee-e964ff8aa1f9')]"
           }
         >
           <Suspense
@@ -40,13 +41,7 @@ const LandingPageLayout = () => {
           >
             <Top />
           </Suspense>
-          <div
-            className={
-              darkMode
-                ? "bg-no-repeat bg-cover bg-[url('https://media.discordapp.net/attachments/1028750792640954368/1230247127347757087/image.png?ex=66329fec&is=66202aec&hm=9a1a8477a33b0a4f442f803551a3c423ca1ac24e4d39ee5dceb44032dad59cd7&=&format=webp&quality=lossless&width=750&height=421')]"
-                : "bg-no-repeat bg-cover bg-[url('https://media.discordapp.net/attachments/1028750792640954368/1229923397304324097/wMyC7HNgJWbgAAAABJRU5ErkJggg.png?ex=6631726c&is=661efd6c&hm=8eac2d4798b14703d8c0caac9e424c4532d2736c054ebf4126ebbafb022efe50&=&format=webp&quality=lossless&width=688&height=380')]"
-            }
-          >
+          <div className="bg-transparent">
             <Outlet />
             <Suspense
               fallback={

@@ -6,6 +6,7 @@ import { Switch } from "@/components/ui/switch";
 
 import { NavbarRedu, NavTypes } from "@/reducers/components/Navbar/NavbarRedu";
 import { useToast } from "@/components/ui/use-toast";
+import { AnimatedTooltip } from "@/components/ui/aceternity/3DTooltip";
 
 const Btn = React.lazy(() => import("@/components/button/Button"));
 const Typewriter = React.lazy(
@@ -83,7 +84,7 @@ const Home = () => {
     <>
       <div className="zcontainer">
         <div className="center">
-          <div className="relative overflow-hidden py-24 lg:py-32">
+          <div className={twMerge(darkMode ? "bg-gradient-to-b from-orange-600/30 to-transparent" : "bg-gradient-to-b from-zinc-400/40 to-transparent", "relative overflow-hidden py-24 lg:py-32")}>
             {/* Gradients */}
             {/* <div
               aria-hidden="true"
@@ -100,23 +101,28 @@ const Home = () => {
                     <div className="w-24 rounded floatingImage">
                       <Image
                         alt="Logo do servidor."
-                        src="https://media.discordapp.net/attachments/1028750792640954368/1229857104601284618/Sem_titulo.png?ex=663134af&is=661ebfaf&hm=1541752fa06135541f141132d9aefcc105e0e7ba0a4d285e357abce459fac918&=&format=webp&quality=lossless&width=464&height=477"
+                        src="https://firebasestorage.googleapis.com/v0/b/lambda-5409b.appspot.com/o/website%2FLogoIcon.webp?alt=media&token=c33f3d3e-d125-40fe-8526-604ea8d33d6d"
                       />
                     </div>
                   </div>
 
                   <div className="md-5" />
                   <div className="m-1" />
-
-                  <div className="title">
-                    <Typewriter text={"Lambda"} typingSpeed={50} />
+                  <div className="flex justify-center items-center">
+                    <div>
+                      <Typewriter
+                        className="bg-transparent p-1 w-24 rounded border-zinc-500 dark:border-zinc-800 transition-all border-white/35 hover:border-2"
+                        text={"Lambda"}
+                        typingSpeed={50}
+                      />
+                    </div>
                   </div>
                   <p style={{ color: "black" }} className="py-6">
                     <a>
                       <div className="divider" />
                       <span className="text-white-500">
                         Servidor{" "}
-                        <span className="text-orange-500">confortavel</span>{" "}
+                        <span className="text-orange-300">confortavel</span>{" "}
                         para,
                       </span>
                       <div className="m-1" />
@@ -130,7 +136,12 @@ const Home = () => {
                   {/* <button className="btn btn-primary">Get Started</button> */}
                 </div>
                 <div>
-                  <h5 style={{ userSelect: "none", fontSize: 50 }}>↜</h5>
+                  <h5
+                    style={{ userSelect: "none", fontSize: 50 }}
+                    className={""}
+                  >
+                    ↯
+                  </h5>
                   <div
                     className={
                       "bg-transparent rounded border-transparent transition-all border-white/35 hover:border-2 sm:justify-center justify-center items-center duration-4 w-22 text-center"
@@ -149,7 +160,7 @@ const Home = () => {
                           toggleDark();
                           toast({
                             title: "Toggled dark mode!",
-                            description: "Friday, February 10, 2023 at 5:57 PM",
+                            description: "",
                           });
                         }}
                         id="theme-changer"
@@ -157,7 +168,6 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* End Buttons */}
               </div>
             </div>

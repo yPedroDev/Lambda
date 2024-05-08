@@ -22,12 +22,12 @@ const NoPageFound = () => {
           <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6 flex flex-col items-center justify-center text-center space-y-4">
               <div className="space-y-2">
-                <h1 className="avatar w-16">
+                <h1 className="avatar w-24">
                   <Image
-                    alt={'"Detetive melhor que sherlock holmes"'}
-                    src="https://media.discordapp.net/attachments/1028750792640954368/1227244324358586429/image-removebg-preview.png?ex=6627b358&is=66153e58&hm=fa468cdf734e5db096fffaf2c51176cbf77134044c1199e18b4fcb69a8c7bbba&=&format=webp&quality=lossless&width=572&height=582"
-                    width={58}
-                    height={58}
+                    alt={'"Bug gif"'}
+                    src="https://firebasestorage.googleapis.com/v0/b/lambda-5409b.appspot.com/o/website%2Fbug.gif?alt=media&token=adfab903-29a1-41b8-86d4-f2d1e57f6543"
+                    width={90}
+                    height={90}
                   />
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">

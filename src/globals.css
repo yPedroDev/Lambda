@@ -42,7 +42,7 @@
     --ring: 25 100% 45%;
   }
 
-  .dark {
+  /* .dark {
     --gradient: #e65c00;
 
     --background: 25 65% 3.6%;
@@ -73,7 +73,7 @@
     --destructive-foreground: 25 10% 97.25%;
 
     --ring: 25 100% 45%;
-  }
+  } */
 }
 
 @layer base {

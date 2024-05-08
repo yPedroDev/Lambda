@@ -4,14 +4,11 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { DarkModeProvider } from "@/context/theme/ThemeContext";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 
 // [ Pages ] \\
 
-const HomePage = React.lazy(() => import("@/pages/home/Home"));
-const ErrorPage = React.lazy(() => import("@/pages/error/Error"));
-const NoPageFound = React.lazy(() => import("@/pages/nopagefound/NoPageFound"));
-const LandingPageLayout = React.lazy(() => import("@/pages/landing/Landing"));
+import { HomePage, ErrorPage, NoPageFound, LandingPageLayout } from "@/page";
 
 // [ Others ] \\
 
@@ -38,7 +35,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <React.Suspense
@@ -53,7 +52,7 @@ root.render(
     >
       <DarkModeProvider>
         <RouterProvider router={router} />
-        <Toaster/>
+        <Toaster />
       </DarkModeProvider>
     </React.Suspense>
   </React.StrictMode>
