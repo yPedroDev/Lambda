@@ -1,3 +1,3 @@
 # Lambda
 
-This my first personal project for minecraft server.
+This my first personal project for a minecraft server.
